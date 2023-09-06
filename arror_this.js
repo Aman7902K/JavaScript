@@ -27,3 +27,4 @@ let siu = (num1,num2) => (num1+num2)
 console.log(siu(1,4))
 let siuu = (num1,num2) => ({name:"vini"})
 console.log(siuu);
+

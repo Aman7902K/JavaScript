@@ -1,6 +1,6 @@
-arr = [1,2,3,4,5,6,7,8,9]
+let arr = [1,2,3,4,5,6,7,8,9]
 let g4 = arr.filter((i) => {return i>4})
-console.log(g4);
+// console.log(g4);
 const books = [
     { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
     { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
@@ -14,4 +14,8 @@ const books = [
   ];
 
 let bookpublish = books.filter((bk) => bk.genre === 'Fiction')
-console.log(bookpublish);
+// console.log(bookpublish);
+
+let add10 = arr.map((n) => n+10).filter((n) => n<16)
+console.log(add10);
+ 
