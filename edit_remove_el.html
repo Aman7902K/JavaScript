@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ol class="count">
+        <li>one</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ol>
+</body>
+<Script>
+    function addelement(cn){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(cn))
+        document.querySelector('.count').appendChild(li)
+    }
+    addelement('Five')
+    const thirdel = document.querySelector('li:nth-child(3)') 
+    // thirdel.innerHTML = "3" less optimized approach
+    const newel = document.createElement('li')
+    newel.textContent = "3"
+    thirdel.replaceWith(newel)
+
+    newel.remove()
+
+</Script>
+</html>
