@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+body{
+    background-color: #212121;
+    color: white;
+}
+#clock{
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px 50px;
+    margin-top: 10px;
+    font-size: 30px;
+}

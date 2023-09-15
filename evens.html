@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ulist">
+        <li><button type="button" id="one">one</button></li>
+        <br>
+        <li><button type="button" id="two">two</button></li>
+        <br>
+        <li><button type="button" id="three">three</button></li>
+        <br>
+        <li><button type="button" id="four">four</button></li>
+        <br>
+        <li><button type="button" id="five">five</button></li>
+        <br>
+        <li><a href="https://www.google.com/" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('ulist').addEventListener('click', function(e){
+    //     console.log('siu');
+    //     // e.stopPropagation()
+    // })
+    // document.getElementById('two').addEventListener('click', function(e){
+    //     console.log('siuuu');
+    //     e.stopPropagation()
+    // })
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     console.log('google clicked');
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // })
+    document.querySelector('#ulist').addEventListener('click',function(e){
+        e.preventDefault()
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'BUTTON'){
+        let rm = e.target.parentNode
+        rm.remove()
+        }
+    })
+</script>
+</html>
