@@ -1,0 +1,38 @@
+<style>
+    .height{
+        height: 500px;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Test</h1>
+    </header>
+    <button type="submit" class="test">test</button>
+    <div class="valchange" >
+        <div class="height"></div>
+    </div>
+    <footer>
+        Test
+    </footer>
+
+</body>
+<script>
+    const button = document.querySelector('.test')
+    let hg = document.querySelector('.valchange')
+    // hg. 
+    document
+    button.addEventListener('click', function(e){
+        e.preventDefault()
+        hg.inner = ""
+        // console.log("hello");
+    })
+</script>
+</html>

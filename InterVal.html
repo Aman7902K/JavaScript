@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Namaste</h1>
+    <button id="stop">stop</button>
+    <button id="Start">Start</button>
+    
+</body>
+<script>
+    const saydate = function(){
+        console.log("hello",Date.now());
+    }
+    let h1 = setInterval(saydate,1000)
+    let h2;
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(h1)
+        clearInterval(h2)
+    })
+    
+    document.querySelector('#Start').addEventListener('click', function(){
+        h2 = setInterval(saydate,1000)
+    })
+</script>
+</html>

@@ -3,6 +3,10 @@ map.set('IN','India')
 map.set('CH','China')
 map.set('FR','France')
 
+const str= "hello"
+for (const key in str) {
+    // console.log(str[key]);
+}
 for (const [key,value] of map) {
     // console.log(`${key} :- ${value}`)
 }
@@ -30,7 +34,7 @@ function printarr(item){
 // arr.forEach(printarr)
 
 arr.forEach((item,index,arrr)=>{
-    console.log(item,index,arrr)
+    // console.log(item,index,arrr)
 })
 
 let arrrr = [
@@ -49,5 +53,5 @@ let arrrr = [
 ]
 
 arrrr.forEach((item)=>{
-    console.log(item.language);
+    // console.log(item.language);
 })

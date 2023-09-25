@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <h2>Something</h2>
+    <div class="image"></div>
+    <img src="" alt="">
+</body>
+<script>
+    const reqUrl = "https://api.github.com/users/hiteshchoudhary"
+    const xhmr = new XMLHttpRequest();
+    xhmr.open('GET',reqUrl); 
+    const image = document.querySelector('.image')
+    xhmr.onreadystatechange = function(){
+        console.log(xhmr.readyState);
+        if(xhmr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data.followers);
+            const img_url = data.avatar_url
+            image.innerHTML = `
+            <img src="${img_url}" alt="">
+            <span>${data.followers}</span>
+            `
+        }
+    }
+    xhmr.send();
+</script>
+</html>

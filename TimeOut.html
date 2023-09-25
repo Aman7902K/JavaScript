@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Namaste</h1>
+    <button>stop</button>
+</body>
+<script>
+    let hello = function(){
+        console.log("hello");
+    }
+    let h1change = function(){
+        document.querySelector('h1').innerHTML = "diffusion"
+    }
+    // setTimeout(hello,2000)
+    let h1changestop = setTimeout(h1change,2000)
+    document.querySelector("button").addEventListener('click',function(){
+        clearTimeout(h1changestop)
+        console.log("stopped");
+    })
+</script>
+</html>
